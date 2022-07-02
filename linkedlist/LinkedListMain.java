@@ -9,5 +9,6 @@ public class LinkedListMain {
         myFirstNode.setNext(mySecondNode);
         mySecondNode.setNext(myThirdNode);
         System.out.println(myFirstNode.getKey() + "->" +mySecondNode.getKey()+ "->"+myThirdNode.getKey()+" Nodes");
+
     }
 }
