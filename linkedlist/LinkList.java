@@ -28,7 +28,18 @@ public class LinkList {
             }
             current = current.getNext();
         }
+    }
 
+    public void append(MyNode newNode) {
+        if (head == null) {
+            head = newNode;
+        }
+        if (tail == null) {
+            tail = newNode;
+        }else {
+            tail.setNext(newNode);
+            tail = newNode;
+        }
     }
 }
 
