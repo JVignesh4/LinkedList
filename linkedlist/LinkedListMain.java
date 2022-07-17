@@ -2,13 +2,15 @@ package com.blz.linkedlist;
 
 public class LinkedListMain {
     public static void main(String[] args) {
-        //creating object for myNode to add node values
-        MyNode<Integer> myFirstNode = new MyNode<>(56);
-        MyNode<Integer> mySecondNode = new MyNode<>(30);
-        MyNode<Integer> myThirdNode = new MyNode<>(70);
-        myFirstNode.setNext(mySecondNode);
-        mySecondNode.setNext(myThirdNode);
-        System.out.println(myFirstNode.getKey() + "->" +mySecondNode.getKey()+ "->"+myThirdNode.getKey()+" Nodes");
-
+        System.out.println("----- Welcome to Data Structure: Linked List -----");
+        System.out.println("Linked list 1 using add");
+        MyNode<Integer> firstNode = new MyNode<Integer>(70);
+        MyNode<Integer> secondNode = new MyNode<Integer>(30);
+        MyNode<Integer> thirdNode = new MyNode<Integer>(56);
+        LinkList myLinkedList = new LinkList();
+        myLinkedList.addNode(firstNode);
+        myLinkedList.addNode(secondNode);
+        myLinkedList.addNode(thirdNode);
+        myLinkedList.display();
     }
 }

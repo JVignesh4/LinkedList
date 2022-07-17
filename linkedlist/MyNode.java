@@ -1,24 +1,29 @@
 package com.blz.linkedlist;
 
-public class MyNode<K> {
-    private K key;
-    private MyNode next;
+public class MyNode <K> implements INode<K> {
 
-    public K getKey() {
-        return key;
-    }
-    public void setKey(K key) {
-        this.key = key;
-    }
-    public MyNode getNext() {
-        return next;
-    }
-
-    public void setNext(MyNode next) {
-        this.next = next;
-    }
+    K key;
+    INode next;
 
     public MyNode(K key) {
         this.key = key;
+    }
+
+    @Override
+    public K getKey() {
+        return key;
+    }
+
+    @Override
+    public void setKey(K key) {
+        key = key;
+    }
+
+    public INode getNext() {
+        return next;
+    }
+
+    public void setNext(INode next) {
+        this.next = next;
     }
 }
