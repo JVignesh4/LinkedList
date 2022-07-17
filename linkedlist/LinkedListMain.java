@@ -13,5 +13,6 @@ public class LinkedListMain {
         System.out.println("Inserting 30 between 56 and 70");
         myLinkedList.insert(firstNode, secondNode);
         myLinkedList.display();
+
     }
 }
