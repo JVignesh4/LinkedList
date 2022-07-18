@@ -63,6 +63,21 @@ public class LinkList {
         this.tail = (MyNode) tempNode;
         return tail;
     }
+
+    public void insertWithKey(int key, INode newNode) {
+
+        INode nodeWithKeyValue = search(key);
+        if(nodeWithKeyValue.getKey().equals(key)) {
+            INode temporaryNode = nodeWithKeyValue.getNext();
+            nodeWithKeyValue.setNext(newNode);
+            newNode.setNext(temporaryNode);
+        }
+        else {
+            System.out.println("Key Node Found");
+        }
+
+    }
+
     public MyNode search(int key) {
         INode temporaryNode = head;
         boolean isFound = false;
