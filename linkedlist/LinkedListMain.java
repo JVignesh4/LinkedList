@@ -13,7 +13,11 @@ public class LinkedListMain {
         myLinkedList.append(thirdNode);
         myLinkedList.insert(firstNode, secondNode);
         myLinkedList.insertWithKey(valueOfPreviousNode, nodeToBeInserted);
+        INode deletedNode = myLinkedList.deleteNodeWithKey(40);
+        System.out.println("The deleted key value is:"+deletedNode.getKey());
+        int listSize = myLinkedList.size();
         myLinkedList.display();
+        System.out.println("The size of the linked list is : "+listSize);
 
     }
 }
