@@ -36,11 +36,12 @@ public class LinkList {
         }
         if (tail == null) {
             tail = newNode;
-        }else {
+        } else {
             tail.setNext(newNode);
             tail = newNode;
         }
     }
+
     public void insert(INode myNode, INode newNode) {
         INode tempNode = myNode.getNext();
         myNode.setNext(newNode);
@@ -52,6 +53,15 @@ public class LinkList {
         this.head = (MyNode) this.head.getNext();
         return temporaryNode;
 
+    }
+
+    public INode deleteLastNode() {
+        INode tempNode = head;
+        while (!tempNode.getNext().equals(tail)) {
+            tempNode = tempNode.getNext();
+        }
+        this.tail = (MyNode) tempNode;
+        return tail;
     }
 }
 
