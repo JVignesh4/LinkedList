@@ -9,13 +9,16 @@ public class LinkedListMain {
         LinkList myLinkedList = new LinkList();
         myLinkedList.addNode(firstNode);
         myLinkedList.append(thirdNode);
-        System.out.println("Inserting 30 between 56 and 70");
         myLinkedList.insert(firstNode, secondNode);
-        System.out.println("Linked list before deletion: ");
         myLinkedList.display();
 
-        INode deletedNode = myLinkedList.deleteLastNode();
-        System.out.println("The deleted key value is:"+deletedNode.getKey());
+        MyNode searchedKey = myLinkedList.search(70);
+        if(searchedKey.getKey().equals(70)) {
+            System.out.println("Key Found");
+        }
+        else {
+            System.out.println("Key Not Found");
+        }
         myLinkedList.display();
 
     }
